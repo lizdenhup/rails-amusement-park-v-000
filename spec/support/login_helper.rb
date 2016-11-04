@@ -2,7 +2,7 @@ module LoginHelper
 
   def visit_signup
     visit '/'
-    click_link('Sign up')
+    click_link('Sign Up')
   end
 
   def user_signup
@@ -17,7 +17,7 @@ module LoginHelper
 
   def visit_signin
     visit '/'
-    click_link('Sign in')
+    click_link('Sign In')
   end
 
   def user_login

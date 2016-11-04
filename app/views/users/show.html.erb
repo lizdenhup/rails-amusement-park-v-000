@@ -1,0 +1,11 @@
+<% unless @user.admin? %> 
+  Height: <%= @user.height %><br>
+  Mood: <%= @user.mood %>
+  Tickets: <%= @user.tickets %><br>
+  Nausea: <%= @user.nausea %><br>
+  Happiness: <%= @user.happiness %>
+<% end %> s
+
+<% if @user.admin? %>
+  ADMIN
+<% end %>
