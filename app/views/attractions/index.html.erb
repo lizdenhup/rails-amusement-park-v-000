@@ -1,0 +1,5 @@
+<% @attractions.each do |attraction| %>
+  <div>
+  <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+  </div>
+<% end %> 

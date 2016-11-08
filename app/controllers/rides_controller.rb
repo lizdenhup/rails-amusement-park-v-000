@@ -1,6 +1,6 @@
 class RidesController < ApplicationController
 
-  def create
+  def new
     @ride = Ride.new(
       :user_id => params[:user_id],
       :attraction_id => params[:attraction_id]
