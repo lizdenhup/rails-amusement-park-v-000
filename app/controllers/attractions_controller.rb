@@ -29,6 +29,7 @@ before_action :set_attraction, only: [:show, :edit, :update, :destroy]
   def destroy
     @attraction.destroy
     redirect_to attractions_path, notice: 'Attraction successfully deleted.'
+  end 
   
   private
 
