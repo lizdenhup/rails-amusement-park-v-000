@@ -6,7 +6,7 @@ class RidesController < ApplicationController
       :attraction_id => params[:attraction_id]
       )
     if @ride.save 
-      @message = @ride.take_ride 
+      @message = @ride.take_ride
       redirect_to user_path(@ride.user, :message => @message)
     end 
   end
