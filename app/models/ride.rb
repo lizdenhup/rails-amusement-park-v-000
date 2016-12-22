@@ -8,9 +8,9 @@ class Ride < ActiveRecord::Base
     elsif !tall_enough? && enough_tickets?
       "Sorry. You are not tall enough to ride the #{attraction.name}."
     elsif !enough_tickets? && tall_enough?
-      "Sorry. You do not have enough tickets the #{attraction.name}."
+      "Sorry. You do not have enough tickets to ride the #{attraction.name}."
     elsif !enough_tickets? && !tall_enough?
-      "Sorry. You do not have enough tickets the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
+      "Sorry. You do not have enough tickets to ride the #{attraction.name}. You are not tall enough to ride the #{attraction.name}."
     end 
   end 
 
@@ -23,6 +23,7 @@ class Ride < ActiveRecord::Base
         :nausea => updated_nausea,
         :happiness => updated_happiness
         )
+      "Thanks for riding the #{self.attraction.name}!"
   end 
 
   def enough_tickets?

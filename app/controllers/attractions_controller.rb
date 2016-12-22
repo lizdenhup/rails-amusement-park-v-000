@@ -38,7 +38,7 @@ before_action :set_attraction, only: [:show, :edit, :update, :destroy]
     end 
 
     def attraction_params
-      require(:attraction).permit(:name, :tickets, :nausea_rating, :happiness_rating, :min_height)
+      params.require(:attraction).permit(:name, :tickets, :nausea_rating, :happiness_rating, :min_height)
     end
 
 end

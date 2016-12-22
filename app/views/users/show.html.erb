@@ -1,3 +1,9 @@
+<% if @message %>
+  <div>
+    <p><%= @message %></p>
+  </div>
+<% end %>
+
 <% unless @user.admin? %> 
   Height: <%= @user.height %><br>
   Mood: <%= @user.mood %>
