@@ -6,6 +6,10 @@ before_action :set_attraction, only: [:show, :edit, :update, :destroy]
   end 
 
   def new
+    @attraction = Attraction.new 
+  end 
+
+  def create 
     @attraction = Attraction.new(attraction_params)
     @attraction.save
     redirect_to attraction_path(@attraction)
@@ -16,6 +20,7 @@ before_action :set_attraction, only: [:show, :edit, :update, :destroy]
   end 
 
   def edit
+
   end
 
   def update

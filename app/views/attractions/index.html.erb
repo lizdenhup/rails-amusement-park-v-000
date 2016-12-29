@@ -3,6 +3,7 @@
    <% @attractions.each do |attraction| %>
     <div>
     <%= link_to "Show #{attraction.name}", attraction_path(attraction) %>
+    <%= link_to "Edit Attraction", attraction_path(attraction) %> 
     </div>
   <% end %>
 <% else %>
